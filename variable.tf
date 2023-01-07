@@ -32,35 +32,12 @@ variable "tenant_id" {
 
 }
 
-
-variable "instance_size"  {
-
-    type = string 
-
-    description = "Azure instance size"
-
-    default = "Standard_F2" 
-
+variable "resource_group_location"  {
+    default        = "eastus"
+    description    = "location of nginx server resource group"
 }
 
-
-variable "Location"  {
-
-    type = string 
-
-    description = "Environment" 
-
-    default = "West US"
-
-}
-
-
-variable "environment" {
-
-   type = string
-
-   description - "Environment"
-
-    default = "dev"
-
-}
+variable "resource_group_name_prefix"
+    default       = "nginx_server_rg"
+    description   = "prefix of the resource group name" 
+}    
